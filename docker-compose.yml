@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - FLASK_APP=app
+      - FLASK_APP=run.py
     command: bash -c "python -m flask run --host=0.0.0.0"
     volumes:
       - .:/opt/project

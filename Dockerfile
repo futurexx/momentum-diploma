@@ -5,5 +5,5 @@ ENV C_FORCE_ROOT="true"
 
 WORKDIR /code
 ADD requirements.txt /code
-COPY . /code
 RUN pip install --no-cache-dir --disable-pip-version-check -r requirements.txt
+COPY . /code
