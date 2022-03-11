@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row" style="margin: 0 40px">
+  <div class="md-form col-sm-6">
+    <ul class="list-group">
+      {% for check in added_check %}
+      <li class="list-group-item">
+          <p>{{ check }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="md-form col-sm-6">
+    <form>
+      <div class="form-group">
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Выберете продукт</option>
+          <option value="1">Продукт 1</option>
+          <option value="2">Продукт 2</option>
+          <option value="3">Продукт 3</option>
+      </select>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="new-check" placeholder="Текст проверки">
+      </div>
+      <button type="submit" class="btn btn-primary">Добавить</button>
+      <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
